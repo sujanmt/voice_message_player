@@ -37,8 +37,16 @@ class Bubble extends StatelessWidget {
 
   Widget _bubble(BuildContext context) => voice
       ? VoiceMessage(
-          audioSrc: 'https://sounds-mp3.com/mp3/0012660.mp3',
+          audioSrc:
+              'http://test.thingsabove.io/api/v1/attachments/99157078-8236-4a9f-93ab-d037f5ef0abf',
           me: index == 5 ? false : true,
+          width: MediaQuery.of(context).size.width,
+          noiseHeight: 20,
+          noiseWidth: 105,
+          header: const {
+            "Authorization":
+                "Bearer 13|BAozHq3Bj4BfTxPU1Ga1cPHxvpRWCdaYog2c8tty"
+          },
         )
       : Container(
           constraints: BoxConstraints(maxWidth: 100.w * .7),
